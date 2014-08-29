@@ -32,7 +32,7 @@ test$year <- year(test$datetime)
 #Choose Model
 # fit <- randomForest(as.factor(count) ~ season + holiday + weather + day+ hr + temp + atemp+
 #                       humidity+windspeed , data=train.data, ntree = 700, importance=TRUE)
-fit_rf <- randomForest(count ~ season + holiday + weather + day+ hr + temp + atemp+
+fit_rf <- randomForest(count ~ season + holiday + weather + day+ hr + atemp+
                       humidity+windspeed , data=train, ntree = 700,importance=TRUE)
 fit_poisson <- glm(count ~  hr , data=train, family = "poisson" )
 
